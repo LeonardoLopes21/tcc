@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "id": "094e",
+      "email": "robbarryn@gmail.com",
+      "senha": "Robb12345",
+      "nome": "Robert",
+      "sobrenome": "Arryn",
+      "cpf": "930.123.553-33",
+      "nascimento": "1995-08-04",
+      "endereco": "Rua Rua 000"
+    }
+  ],
+  "docs": []
+}
