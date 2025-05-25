@@ -3,7 +3,7 @@
     {
       "id": "094e",
       "email": "robbarryn@gmail.com",
-      "senha": "Robb12345",
+      "senha": "Robb123456",
       "nome": "Robert",
       "sobrenome": "Arryn",
       "cpf": "930.123.553-33",
@@ -11,5 +11,15 @@
       "endereco": "Rua Rua 000"
     }
   ],
-  "docs": []
+  "docs": [
+    {
+      "documentName": "Russia Shipment Tariffs",
+      "documentFormat": "PDF",
+      "reportId": "6856522",
+      "documentRegion": "Rússia",
+      "departmentName": "DIF",
+      "documentType": "Extrajudicial Contract",
+      "id": "8026"
+    }
+  ]
 }

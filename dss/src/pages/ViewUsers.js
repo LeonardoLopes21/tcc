@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from "react-router-dom";
 
-export default function ViewUsersPage() {
+export default function ViewUsers() {
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
 
@@ -10,7 +10,7 @@ export default function ViewUsersPage() {
     fetch("http://localhost:5000/users")
       .then((res) => res.json())
       .then((data) => setUsers(data))
-      .catch((error) => console.error("Failed to fetch users:", error));
+      .catch((error) => console.error("Erro ao buscar usuários:", error));
   }, []);
 
   const handleDelete = (id) => {
@@ -24,7 +24,7 @@ export default function ViewUsersPage() {
       .then(() => {
         setUsers((prev) => prev.filter((user) => user.id !== id));
       })
-      .catch((error) => console.error("Delete failed:", error));
+      .catch((error) => console.error("Erro ao deletar:", error));
   };
 
   const cancelDelete = (id) => {
@@ -47,10 +47,10 @@ export default function ViewUsersPage() {
           <thead className="table-dark">
             <tr>
               <th>ID</th>
-              <th>Nome</th>
-              <th>Sobrenome</th>
               <th>Email</th>
               <th>Senha</th>
+              <th>Nome</th>
+              <th>Sobrenome</th>
               <th>CPF</th>
               <th>Nascimento</th>
               <th>Endereço</th>
@@ -61,10 +61,10 @@ export default function ViewUsersPage() {
             {users.map((user) => (
               <tr key={user.id}>
                 <td>{user.id}</td>
-                <td>{user.nome}</td>
-                <td>{user.sobrenome}</td>
                 <td>{user.email}</td>
                 <td>{user.senha}</td>
+                <td>{user.nome}</td>
+                <td>{user.sobrenome}</td>
                 <td>{user.cpf}</td>
                 <td>{user.nascimento}</td>
                 <td>{user.endereco}</td>

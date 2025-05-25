@@ -1,15 +1,18 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from "react-router-dom";
 import Carrousel from "../components/Carrousel";
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
   const handleComecarAgoraClick = () => {
     let isLogged = localStorage.getItem('isLogged');
 
-    if (isLogged !== 'true') {
-      window.location.href = '/login';
+    if (isLogged === 'true') {
+      navigate('/main');
     } else {
-      console.log('User is logged in, proceeding...');
+      navigate('/login');
     }
   };
 
