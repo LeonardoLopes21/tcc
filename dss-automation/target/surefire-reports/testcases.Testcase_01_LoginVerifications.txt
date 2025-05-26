@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: testcases.Testcase_01_LoginVerifications
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.543 s - in testcases.Testcase_01_LoginVerifications
