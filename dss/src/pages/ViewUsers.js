@@ -71,13 +71,13 @@ export default function ViewUsers() {
                 <td>
                   {user.confirmingDelete ? (
                     <>
-                      <button className="btn btn-sm btn-danger me-2" onClick={() => confirmDelete(user.id)}>Confirmar</button>
+                      <button id={"confirmdelete" + user.id} className="btn btn-sm btn-danger me-2" onClick={() => confirmDelete(user.id)}>Confirmar</button>
                       <button className="btn btn-sm btn-secondary" onClick={() => cancelDelete(user.id)}>Cancelar</button>
                     </>
                   ) : (
                     <>
                       <button className="btn btn-sm btn-warning me-2" onClick={() => handleChangeUser(user)}>Alterar</button>
-                      <button className="btn btn-sm btn-danger" onClick={() => handleDelete(user.id)}>Deletar</button>
+                      <button id={"delete" + user.id} className="btn btn-sm btn-danger" onClick={() => handleDelete(user.id)}>Deletar</button>
                     </>
                   )}
                 </td>

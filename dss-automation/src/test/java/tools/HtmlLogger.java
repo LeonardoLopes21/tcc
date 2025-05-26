@@ -20,7 +20,7 @@ import javax.imageio.ImageIO;
 
 public class HtmlLogger {
 
-    private final List<Step> passos = new ArrayList<>();
+    private final List<Step> passos = new ArrayList<Step>();
     private String caminhoArquivo = "E:/Users/Documents/GitHub/tcc/dss-automation/src/test/java/logs/";
     private final String pastaScreenshots = "E:/Users/Documents/GitHub/tcc/dss-automation/src/test/java/logs/screenshots/";
     private int passoCounter = 0;

@@ -10,7 +10,7 @@ public class HomePage {
 	
 	private static String enterButtonId  = "enterButton";
 	
-	public static void enterLogin(WebDriver driver) throws InterruptedException {
+	public static void enter(WebDriver driver) throws InterruptedException {
 		
 		Thread.sleep(3000);
 		
