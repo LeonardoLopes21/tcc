@@ -260,6 +260,7 @@ export default function LoginPage() {
       <div className="text-center mt-3">
         <button
           className="btn btn-outline-secondary"
+          id="switchPerspective"
           onClick={() => {
             setModoCadastro(!modoCadastro);
             setErrorMessages([]);

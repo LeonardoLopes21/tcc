@@ -40,7 +40,7 @@ public class User {
 
 	public static User getUnavailableUser() {
 		
-		User a = new User("asd@gmail.com", "asd123", "james", "cameron", "11122233344", "1999-10-10", "Street Rua 111");
+		User a = new User("asd@gmail.com", "asd123", "j", "c", "11122233344", "1900-10-10", "Street Rua 111");
 		return a;
 		
 		
@@ -144,6 +144,15 @@ public class User {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+
+
+	public static User getValidUser() {
+		
+		User u = new User("jucabala@gmail.com", "juquita123", "Juca", "Bala", "16384933273", "01012000", "Mariano Procópio N°37");
+		
+		return u;
 	}
 	
 	

@@ -11,15 +11,14 @@
       "endereco": "Rua Rua 000"
     }
   ],
-  "docs": [
+  "prods": [
     {
-      "documentName": "Russia Shipment Tariffs",
-      "documentFormat": "PDF",
-      "reportId": "6856522",
-      "documentRegion": "Rússia",
-      "departmentName": "DIF",
-      "documentType": "Extrajudicial Contract",
-      "id": "8026"
+      "productName": "Server 20TB",
+      "price": 80000,
+      "region": "Brasil",
+      "department": "Bélico",
+      "productType": "Infraestrutura Hiperconvergente",
+      "id": "0dc9"
     }
   ]
 }
