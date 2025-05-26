@@ -65,7 +65,7 @@ export default function HomePage() {
         </main>
 
         <div className="text-center mt-5">
-          <button 
+          <button id="enterButton"
             className="btn btn-primary btn-lg" 
             onClick={handleComecarAgoraClick}>
             Crie seu primeiro documento!
