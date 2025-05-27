@@ -252,6 +252,7 @@ export default function LoginPage() {
       <div className="text-center mt-3">
         <button
           className="btn btn-warning w-100"
+          id="backButton"
           onClick={() => navigate("/")}>
           Voltar
         </button>
