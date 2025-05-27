@@ -77,6 +77,22 @@ export default function CreateProductPage() {
     }
 
     try {
+      const existingResponse = await fetch("http://localhost:5000/prods");
+      const existingProducts = await existingResponse.json();
+
+      const nameExists = existingProducts.some(
+        (prod) => prod.productName.trim().toLowerCase() === formData.productName.trim().toLowerCase()
+      );
+
+      if (nameExists) {
+        setErrors((prev) => ({
+          ...prev,
+          productName: "Já existe um produto com este nome."
+        }));
+        setSubmitSuccess(false);
+        return;
+      }
+
       const response = await fetch("http://localhost:5000/prods", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -121,7 +137,7 @@ export default function CreateProductPage() {
               onChange={handleChange}
               placeholder="Digite o nome do produto"
             />
-            {errors.productName && <div className="text-danger mt-1">{errors.productName}</div>}
+            {errors.productName && <div id="prodNameError" className="text-danger mt-1">{errors.productName}</div>}
           </div>
 
           <div className="col-md-6">
@@ -135,7 +151,7 @@ export default function CreateProductPage() {
               onChange={handleChange}
               placeholder="Digite o preço"
             />
-            {errors.price && <div className="text-danger mt-1">{errors.price}</div>}
+            {errors.price && <div id="priceError" className="text-danger mt-1">{errors.price}</div>}
           </div>
 
           <div className="col-md-6">
@@ -151,7 +167,7 @@ export default function CreateProductPage() {
                 <option key={region} value={region}>{region}</option>
               ))}
             </select>
-            {errors.region && <div className="text-danger mt-1">{errors.region}</div>}
+            {errors.region && <div id="regionError" className="text-danger mt-1">{errors.region}</div>}
           </div>
 
           <div className="col-md-6">
@@ -164,7 +180,7 @@ export default function CreateProductPage() {
               onChange={handleChange}
               placeholder="Digite o departamento"
             />
-            {errors.department && <div className="text-danger mt-1">{errors.department}</div>}
+            {errors.department && <div id="departmentError" className="text-danger mt-1">{errors.department}</div>}
           </div>
 
           <div className="col-md-6">
@@ -180,7 +196,7 @@ export default function CreateProductPage() {
                 <option key={type} value={type}>{type}</option>
               ))}
             </select>
-            {errors.productType && <div className="text-danger mt-1">{errors.productType}</div>}
+            {errors.productType && <div id="productTypeError" className="text-danger mt-1">{errors.productType}</div>}
           </div>
         </div>
 

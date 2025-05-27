@@ -31,6 +31,14 @@ public class Testcase_03_CreateValidDocument {
         Thread.sleep(1000);
         MenuPage.deleteProduct(driver, rep.getProductName(), logger);
         Thread.sleep(5000);
+        ArrayList<Product> allProds = DB.getAllProds();
+        
+        for(Product p : allProds) {
+        	if(p.getId().equals(rep.getId())) {
+        		logger.registrarPasso("Produto ainda presente no banco de dados, falha em deletar", false);
+        	}
+        }
+        
         logger.gerarRelatorio();
         driver.close();
 	}

@@ -111,4 +111,10 @@ public class DB {
             return products;
         }
     }
+
+	public static Product getFirstProd() {
+		ArrayList<Product> prods = DB.getAllProds();
+		
+		return prods.get(0);
+	}
 }
